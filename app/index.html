@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FridayFind — Real Black Friday Deals, Checked Today</title>
+<meta name="description" content="42 real Black Friday and Cyber Monday deals, each checked at its store on 27 Nov 2026, with an honest signal for whether each one is really a deal.">
+<link rel="stylesheet" href="style.css">
+<script type="module" src="deals.js"></script>
+<script type="module" src="main.js"></script>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <h1><span class="mark">Friday</span>Find</h1>
+    <p class="tag">Real Black Friday deals, checked at the store today — with an honest call on whether each one is really a deal.</p>
+    <div class="stats" aria-label="Deal summary">
+      <div class="stat"><b id="stat-deals">–</b><span>verified deals</span></div>
+      <div class="stat"><b id="stat-stores">–</b><span>stores</span></div>
+      <div class="stat"><b id="stat-max">–</b><span>biggest discount</span></div>
+      <div class="stat"><b id="stat-lows">–</b><span>genuine lows</span></div>
+    </div>
+    <p class="tag" style="font-size:0.92rem">All prices checked <span id="checked-label">27 Nov 2026, 13:45 WIB</span>. Prices move fast — confirm the price on the store page before you pay.</p>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="wrap row">
+    <input type="search" id="search" placeholder="Search deals — try “AirPods”…" aria-label="Search deals">
+    <select id="category" aria-label="Filter by category"></select>
+    <select id="store" aria-label="Filter by store"></select>
+    <select id="min-discount" aria-label="Minimum discount">
+      <option value="0">Any discount</option>
+      <option value="20">20% off or more</option>
+      <option value="30">30% off or more</option>
+      <option value="40">40% off or more</option>
+      <option value="50">50% off or more</option>
+    </select>
+    <select id="sort" aria-label="Sort deals">
+      <option value="discount">Sort: biggest discount</option>
+      <option value="saving">Sort: biggest saving ($)</option>
+      <option value="price-asc">Sort: lowest price</option>
+      <option value="price-desc">Sort: highest price</option>
+      <option value="signal">Sort: best signal first</option>
+    </select>
+    <label class="check"><input type="checkbox" id="genuine-only"> Genuine lows only</label>
+    <button id="reset-filters" type="button">Reset</button>
+  </div>
+</div>
+
+<main class="wrap">
+  <section class="picks" id="picks-section" aria-label="Top picks">
+    <h2 id="picks-heading">Top picks — the three steepest genuine deals</h2>
+    <div class="pick-grid" id="top-picks"></div>
+  </section>
+
+  <section class="board" aria-label="All deals">
+    <h2>All deals</h2>
+    <p id="result-count">Loading deals…</p>
+    <div id="deal-grid"></div>
+  </section>
+
+  <section class="about" aria-label="How we check deals">
+    <div class="panel">
+      <h2>How we check</h2>
+      <p>Every deal on this page was found and checked on Black Friday, 27 Nov 2026, by reading the price at the named store or in a deals source that names the store and the price. Each card says where its price was read and when. Discounts are computed from the two prices shown, so they always add up. A deal we could not verify is not listed.</p>
+      <ul>
+        <li><b>Genuine low</b> — the lowest price tracked for that product.</li>
+        <li><b>Strong price</b> — a deep cut, well below the usual street price.</li>
+        <li><b>Solid cut</b> — a good, honest discount, not a record low.</li>
+        <li><b>Modest cut</b> — a small but real saving.</li>
+        <li><b>Read the fine print</b> — a real saving with a condition, such as a coupon to clip or a “comparable value” reference price.</li>
+      </ul>
+      <p>Two honest notes for this year: no PlayStation 5 or Xbox console is discounted for Black Friday 2026 — only the Nintendo Switch 2 bundle is cut — and Best Buy shows a “comparable value” next to some sale prices instead of a sale history, so on those deals the sale price itself is what counts.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>FridayFind — a Black Friday deal finder. Prices were checked 27 Nov 2026, 13:45 WIB and can change or sell out. Store links open the product at that store; FridayFind is not affiliated with any store named here.</p>
+  </div>
+</footer>
+</body>
+</html>
